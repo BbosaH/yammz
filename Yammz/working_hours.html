@@ -1,0 +1,136 @@
+<table style="font-size:14px;">
+	<tr style="padding-bottom:100px;">
+		<td width="50px"><B>Mon<B></td>
+		<td width="110px">
+			<select  ng-model="businessobject.mon_start_time" class="form-control" style="width:100px;border-radius:0px;background-color:#EBEAEF;border:0px; height:28px;" ng-options="workinghour.value as workinghour.name for workinghour in workinghours">
+			<option value="">select  </option>
+										
+			</select>
+		</td>
+		<td width="25px"><B> to<B> </td>
+		<td>
+			<select  ng-model="businessobject.mon_end_time" class="form-control" style="width:100px;border-radius:0px;background-color:#EBEAEF;border:0px; height:28px;" ng-options="workinghour.value as workinghour.name for workinghour in workinghours">
+			<option value="">select  </option>
+										
+			</select>
+		</td>
+	</tr>
+	</table>
+	&nbsp;
+	<table style="font-size:14px;">
+	<tr>
+		<td width="50px"><B>Tue<B></td>
+		<td width="110px">
+			<select  ng-model="businessobject.tue_start_time" class="form-control" style="width:100px;border-radius:0px;background-color:#EBEAEF;border:0px; height:28px;" ng-options="workinghour.value as workinghour.name for workinghour in workinghours">
+			<option value="">select  </option>
+										
+			</select>
+		</td>
+		<td width="25px"> <B>to <B></td>
+		<td>
+			<select  ng-model="businessobject.tue_end_time" class="form-control" style="width:100px;border-radius:0px;background-color:#EBEAEF;border:0px; height:28px;" ng-options="workinghour.value as workinghour.name for workinghour in workinghours">
+			<option value="">select  </option>
+										
+			</select>
+		</td>
+	</tr>
+	</table>
+	&nbsp;
+	<table style="font-size:14px;">
+	<tr>
+		<td width="50px"><B>Wed<B></td>
+		<td width="110px">
+			<select  ng-model="businessobject.wed_start_time" class="form-control" style="width:100px;border-radius:0px;background-color:#EBEAEF;border:0px; height:28px;" ng-options="workinghour.value as workinghour.name for workinghour in workinghours">
+			<option value="">select  </option>
+										
+			</select>
+		</td>
+		<td width="25px"><B> to <B></td>
+		<td>
+			<select  ng-model="businessobject.wed_end_time" class="form-control" style="width:100px;border-radius:0px;background-color:#EBEAEF;border:0px; height:28px;" ng-options="workinghour.value as workinghour.name for workinghour in workinghours">
+			<option value="">select  </option>
+										
+			</select>
+		</td>
+	</tr>
+	</table>
+	&nbsp;
+	<div id="addhours" class="collapse out">
+		<table style="font-size:14px;">
+			<tr>
+				<td width="50px"><B>Thur<B></td>
+				<td width="110px">
+					<select  ng-model="businessobject.thur_start_time" class="form-control" style="width:100px;border-radius:0px;background-color:#EBEAEF;border:0px; height:28px;" ng-options="workinghour.value as workinghour.name for workinghour in workinghours">
+					<option value="">select  </option>
+										
+					</select>
+				</td>
+				<td width="25px"><B> to <B></td>
+				<td>
+					<select  ng-model="businessobject.thur_end_time" class="form-control" style="width:100px;border-radius:0px;background-color:#EBEAEF;border:0px; height:28px;" ng-options="workinghour.value as workinghour.name for workinghour in workinghours">
+					<option value="">select  </option>
+										
+					</select>
+				</td>
+			</tr>
+		</table>
+		&nbsp;
+		<table style="font-size:14px;">
+			<tr>
+				<td width="50px"><B>Fri<B></td>
+				<td width="110px">
+					<select  ng-model="businessobject.fri_start_time" class="form-control" style="width:100px;border-radius:0px;background-color:#EBEAEF;border:0px; height:28px;" ng-options="workinghour.value as workinghour.name for workinghour in workinghours">
+						<option value="">select  </option>
+										
+					</select>
+				</td>
+				<td width="25px"><B> to <B></td>
+				<td>
+					<select  ng-model="businessobject.fri_end_time" class="form-control" style="width:100px;border-radius:0px;background-color:#EBEAEF;border:0px; height:28px;" ng-options="workinghour.value as workinghour.name for workinghour in workinghours">
+					<option value="">select  </option>
+										
+					</select>
+				</td>
+			</tr>
+		</table>
+		&nbsp;
+		<table style="font-size:14px;">
+			<tr>
+				<td width="50px"><B>Sat<B></td>
+				<td width="110px">
+					<select  ng-model="businessobject.sat_start_time" class="form-control" style="width:100px;border-radius:0px;background-color:#EBEAEF;border:0px; height:28px;" ng-options="workinghour.value as workinghour.name for workinghour in workinghours">
+						<option value="">select  </option>
+										
+					</select>
+				</td>
+				<td width="25px"><B> to <B></td>
+				<td>
+					<select  ng-model="businessobject.sat_end_time" class="form-control" style="width:100px;border-radius:0px;background-color:#EBEAEF;border:0px; height:28px;" ng-options="workinghour.value as workinghour.name for workinghour in workinghours">
+							<option value="">select  </option>
+										
+					</select>
+				</td>
+			</tr>
+		</table>
+		&nbsp;
+		<table style="font-size:14px;">
+			<tr>
+				<td width="50px"><B>Sun<B></td>
+				<td width="110px">
+					<select  ng-model="businessobject.sun_start_time" class="form-control" style="width:100px;border-radius:0px;background-color:#EBEAEF;border:0px; height:28px;" ng-options="workinghour.value as workinghour.name for workinghour in workinghours">
+								<option value="">select  </option>
+										
+					</select>
+				</td>
+				<td width="25px"><B> to <B></td>
+				<td>
+					<select  ng-model="businessobject.sun_end_time" class="form-control" style="width:100px;border-radius:0px;background-color:#EBEAEF;border:0px; height:28px;" ng-options="workinghour.value as workinghour.name for workinghour in workinghours">
+					<option value="">select  </option>
+										
+					</select>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br/>
+	<a class=" btn redbright" data-toggle="collapse"style="height:30px;border-radius:4; background-color:#BD2532;color:white;" data-target="#addhours">Add Work Hours</a>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.modal2 {
+		    position: fixed;
+		    /*top: 0;*/
+		    right: 0;
+		    bottom: 0;
+		    left: 0;
+		    z-index: 1050;
+		    display: none;
+		    overflow: hidden;
+		    -webkit-overflow-scrolling: touch;
+		    outline: 0;
+		}
+		.modal-dialog{
+			width: 65%;
+		}
+		.modal-content{border-radius: 0px;}
+	</style>
+</head>
+<body>
+	<!-- Content -->
+	<div id="myModal" class="modal2 fade" tabindex="-1" >
+	    <div class="modal-dialog" style="border-radius: 0px;">
+	        <div class="modal-content">
+	            <div class="modal-body">
+	            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                <p></p>
+	                <div class="text-center" style="margin-top: 60px;">
+	                	<h4 style="font-weight: bold;color: #000;">See more and do more on this page</h4>
+	                	<h5>Send Messages, Write a review, rate, like, comment and share. if you don't have a Yammzit account, you can <br> create one to do much more.</h5>
+
+	                	<div style="margin-top: 25px;">
+	                		<a href="signup.html" class="btn" style="background-color:#BD2532;color:#ffffff;width:120px;margin-right: 20px;border-radius: 0px;">Sign Up</a> 
+	                		<a href="login.html" class="btn" style="width:120px;border-radius: 0px;color:#474B4F;background-color: #E9EAEE;">Log In</a>
+	                	</div>
+	                </div>
+	                <br>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!-- Content -->
+
+	<!-- Init javascript -->
+	<script type="text/javascript">
+		window.setTimeout(function() {
+		   $("#myModal").modal('show');
+		}, 3000);
+	</script>
+</body>
+</html>

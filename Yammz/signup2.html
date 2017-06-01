@@ -1,0 +1,177 @@
+<!-- Introducing new second signup page with angular
+js bindings
+addd starter module
+Contains forms for email and phone_number
+Auth controller to manage authentication of signup (ng-controller = 'AuthController');
+call to function toSignup3(email,phone_number) that navigates compiler to page signup3.html;
+
+ -->
+ <html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		 <link rel="icon" href="images/icons/yammz_logo.png">
+		<title>Yammz it</title>
+		<link rel = "stylesheet" href = "bootstrap-3.2.0-dist/css/bootstrap.min.css">
+
+		<!--<link rel="stylesheet" href="bootstrap.vertical-tabs.css">-->
+		<link rel="stylesheet" href="css.css">
+		<!--<link href="dist/css/bootstrap.min.css" rel="stylesheet">-->
+		<link href="styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="distjpicker/styles.css" />
+        <style type="text/css">
+        	body {
+			    color: #797979;
+				background: #f2f2f2;
+			    font-family: Helvetica;
+			   /* padding: 0px !important;
+			    margin: 0px !important;*/
+			    font-size:13px;
+			}
+			.center{text-align: center;}
+			.body_content_top{margin-top: 100px;}
+			.bold{font-weight: bold;}
+			.font14{font-size: 14px;}
+			.font12{font-size: 12px;}
+			.font17{font-size: 17px;}
+			.bottom0{margin-bottom: 0px;}
+			.top0{margin-top: 0px;}
+			.height29{height: 29px;}
+			.noborder_radius{border-radius: 0px;}
+			.top5{padding-top: 5px;}
+			.button{height: 32px;background-color:#BD2532;color: #ffffff;border-color:#BD2532;}
+			.redColor{color:#BD2532; }
+			.footerText{padding-right: 20px;font-weight: lighter;font-size: 12px;}
+			.greyTextColor{color: #797979;}
+			.white{color: #ffffff;}
+			.alert{background-color: #F3D4D6;height: 38px;padding-top:10px;}
+			.top15{padding-top: 15px;}
+			.top20{padding-top: 20px;}
+			.top20{padding-top: 10px;}
+			.top25{margin-top: 25px;}
+
+			.titleColor{color:#3C3D3C;}
+		  	.font14{font-size: 14px;}
+		  	.bolder{font-weight: bolder;}
+        </style>
+	</head>
+
+	<body style="background-color:#ffffff;overflow-x: hidden;" ng-app="starter">
+	
+		<div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#BD2532;border-bottom: #BD2532;" >
+		  	<div class="container">
+				<div class="navbar-header" style="padding-top:3px;">
+			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+				  <h1 style="color:white">
+					&nbsp; Yammzit <img src="images/icons/yammz_logo.png" width="35" height="35" />
+				  </h1>
+			    </div>			    
+		  </div>
+		</div>
+		<!-- <div class="container"> -->
+		<div class="body_content_top"></div>
+		<div class="container">
+			<!-- <div class="row">
+				<div class="col-lg-3 col-xlg-3 hidden-xs col-md-3 col-sm-3"></div>
+				<div class="col-lg-7 col-xl-7 col-sm-7  col-md-7 col-xs-7 " >
+					<div class="alert bottom0 greyTextColor noborder_radius bold" role="alert">
+					  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					  	<span aria-hidden="true">&times;</span>
+				  	  </button>
+					  Please put a correct Email address.
+					</div>
+				</div>
+				<div class="col-lg-2 col-xlg-2 hidden-xs col-md-2 col-sm-2"></div>
+			</div> -->
+			</div>
+			<div class="row">
+				<div class="col-lg-1 col-xlg-1 hidden-xs col-md-1 col-sm-1" ></div>
+
+				<div class="col-lg-6 col-xl-6 col-sm-6  col-md-6 col-xs-6 " >
+					<img src="../admin/Theme/uploads/City7.jpg" style="width: 100%;height:62%;">
+					<div class="row">
+						<div class="col-lg-4 col-xl-4 col-sm-4  col-md-4 col-xs-4 " ></div>
+						<div class="col-lg-6 col-xl-6 col-sm-6  col-md-6 col-xs-6 " >							
+							<h6 class="bold center top10">Read, review & rate any place or business.</h6>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-xl-3 col-sm-3  col-md-3 col-xs-6 " ng-controller="AuthController">
+					<p class="center bold font17 bottom0 redColor" style="padding-top: 140px;"></p>
+					<h6 class="center bolder top15 bottom5 titleColor font14">Enter Your Email & Mobile Number</h6>
+					
+					<p class="center font12">You will use this number when you need to reset your password</p>
+					<!-- <h6 class="center">Providing country and city you currently live in will help us to provide you with the right search results.</h6>
+ 					-->
+ 					<form >
+ 						<div class="form-group">
+ 							<input type="email" placeholder="Email" class="form-control noborder_radius height29" name="" ng-model="email" style="width: 100%;background-color: #EBE6E3;border-color: #EBE6E3;border-radius: 8px;margin-bottom: 23px;">
+ 						</div>
+ 						<div class="form-group bottom0">
+ 							<input type="phonenum" placeholder="Mobile Number" class="form-control noborder_radius height29" name="" ng-model="phone" style="width: 100%;background-color: #EBE6E3;border-color: #EBE6E3;border-radius: 8px;margin-bottom: 23px;">
+ 						</div>
+ 						
+						<div class="form-group top25">
+							<button class="form-control noborder_radius bold button" ng-click="toSignup3(email,phone)">Next</button>
+						</div>
+
+ 					</form>
+
+				</div>
+				<div class="col-lg-1 col-xl-1 hidden-xs col-md-1 col-sm-1" ></div>
+			</div>
+		<!-- </div> -->
+			
+		<!-- Footer -->
+		<div style="bottom:0px;position: fixed;padding-left: 140px;">			
+			<div class="row">
+				<div class="col-md-12 col-lg-12 col-xl-12"></div>
+					<label class="footerText"><a href="javascript:void(0);" class="greyTextColor">Claimyour Business Page</a></label>
+					<label class="footerText"><a href="javascript:void(0);" class="greyTextColor">About yammzit</a></label>
+					<label class="footerText"><a href="javascript:void(0);" class="greyTextColor">Privacy Policy</a></label>
+					<label class="footerText"><a href="javascript:void(0);" class="greyTextColor">Business support</a></label>
+					<label class="footerText"><a href="javascript:void(0);" class="greyTextColor">Contact Yammzit</a></label>
+					<label class="footerText"><a href="javascript:void(0);" class="greyTextColor">Content guidelines</a></label>
+					<label class="footerText"><a href="javascript:void(0);" class="greyTextColor">Ad choice</a></label>
+					<label class="footerText"><a href="javascript:void(0);" class="greyTextColor">Terms of service</a></label>
+					<label class="footerText"><a href="javascript:void(0);" class="greyTextColor">copyright &copy 2016 Yammzit</a></label>
+				</div>
+			</div>			
+		<div>
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="angularplugins/angular/angular.min.js"></script>
+		<script type="text/javascript" src="angularplugins/angular/angular-animate.min.js"></script>
+		<script type="text/javascript" src="bootstrap-3.2.0-dist/js/ui-bootstrap-tpls-1.3.3.min.js"></script>
+
+		<script type="text/javascript" src="angularplugins/angular-ui/angular-ui-router.min.js"></script>
+
+		<script src="assets/js/docs.min.js"></script>
+		<script src="distjpicker/jquery.date-dropdowns.min.js"></script>
+
+		 <script>
+			$(function() {
+
+				$("#example2").dateDropdowns({
+					submitFieldName: 'example2',
+					submitFormat: "dd/mm/yyyy"
+				});
+
+				
+			});
+		</script>
+		<!--my own javascript order-->
+		<script src="js/js/yammz.js" type="text/javascript"></script>
+		<script src="js/js/home-models.js" type="text/javascript"></script>
+		<script src="js/js/home.js" type="text/javascript"></script>
+		<script src="js/js/starter.js" type="text/javascript"></script>
+		
+
+		<script src="node_modules/ng-dialog/js/ngDialog.js" type="text/javascript"></script>
+	</body>
+
+</html>

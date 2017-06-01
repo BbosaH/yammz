@@ -1,0 +1,17 @@
+/*!
+ * @copyright &copy; Kartik Visweswaran, Krajee.com, 2013 - 2016
+ * @version 4.0.1
+ *
+ * Krajee SVG theme style for bootstrap-star-rating.
+ *
+ * For more JQuery/Bootstrap plugins and demos visit http://plugins.krajee.com
+ * For more Yii related demos visit http://demos.krajee.com
+ *//*!
+ * @copyright &copy; Kartik Visweswaran, Krajee.com, 2013 - 2016
+ * @version 4.0.1
+ *
+ * Krajee SVG theme style for bootstrap-star-rating.
+ *
+ * For more JQuery/Bootstrap plugins and demos visit http://plugins.krajee.com
+ * For more Yii related demos visit http://demos.krajee.com
+ */.theme-krajee-svg .krajee-icon{display:inline-block;width:48px;height:48px;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}.theme-krajee-svg.rating-xl .krajee-icon{width:80px;height:80px}.theme-krajee-svg.rating-lg .krajee-icon{width:64px;height:64px}.theme-krajee-svg.rating-sm .krajee-icon{width:40px;height:40px}.theme-krajee-svg.rating-xs .krajee-icon{width:30px;height:30px}.theme-krajee-svg .filled-stars .krajee-icon-star{background-image:url('data:image/star icon red prt 2.png')}.theme-krajee-svg .empty-stars .krajee-icon-star{background-image:url('data:image/star icon red prt 2.png')}.theme-krajee-svg .filled-stars .krajee-icon-heart{background-image:url('data:image/star icon red prt 2.png')}.theme-krajee-svg .empty-stars .krajee-icon-heart{background-image:url('data:image/star icon red prt 2.png')}.theme-krajee-svg .krajee-icon-heart{margin:0 -.08em}.theme-krajee-svg.is-heart .caption{margin-top:-.8em}.theme-krajee-svg.is-heart .clear-rating{margin-top:-.4em}.theme-krajee-svg.rating-rtl.is-heart .filled-stars{right:.02em}.theme-krajee-svg.rating-rtl.is-heart .empty-stars{margin-right:.01em}

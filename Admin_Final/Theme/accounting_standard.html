@@ -1,0 +1,152 @@
+<?php 
+  include("header.php");
+   require_once "classes/connector.php";
+  $conn = new connector();
+  $user_type=$_SESSION['admin_type'];
+?>
+
+<section id="container" >
+    <?php 
+      include("heading.php");
+    ?>
+
+    <?php 
+      include("sidemenu.php");
+    ?>
+    <!--/*************main content************/-->
+    <style type="text/css">
+      /*Accounting styles*/
+      .content_head{
+        font-size:12px;font-weight: bold;margin-top: -2px;
+      }
+
+    </style>
+    <section id="main-content">
+      <section class="wrapper">
+        
+          <div class="row mt panel1">
+            <div class="col-lg-12 col-md-12 col-xlg-12">
+              <div class="col-lg-12 noSidePadding">
+                
+              </div>
+              <div class="col-lg-12 noSidePadding">
+                <div class="form-panel panel2">         
+                  <div class="panel-body" >
+                     <div class="row">
+                          <div class="col-xs-8 col-md-8">
+                               
+                          </div>
+                          <div class="col-xs-4 col-md-4">
+                            <div class="row">
+                              <div class="col-xs-6 col-md-6 colorwhite" class="pull-right"><span class="icon icon-notify" style="margin-left:98%"></span>&nbsp;Notifications</div>
+                              <div class="col-xs-6 col-md-6 colorwhite"><div class="pull-right"><span class="icon icon-email5"></span>&nbsp;Mail</div></div>
+                            </div>
+                             
+                          </div>
+                      </div>
+                     
+                      <div class="row">
+                         <div class="col-xs-12 col-md-12 col-lg-12 col-xl-12 col-xs-12 ">
+                            <div class="panel panel-default set_goal_upper_section">
+                              <div class="panel-body" > 
+
+                                <div class="row">
+                                  <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 col-xs-12 ">
+                                    <p  class="font18" style="margin-top:10px;">Total Number of Ads </p>
+                                    
+                                     <br/>
+                                  </div>
+                                  <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xs-12 ">
+                                    <span class="font30bold" id="set_goal_ads_left">
+                                      <?php                                       
+
+                                        $unass=0;
+                                        if(strcmp($user_type, "Manager")==0){
+                                          $unass=$conn->getUnassigned_numberOf_ads("Manager","");
+
+                                        }elseif (strcmp($user_type, "Supervisor")==0) {
+                                          $unass=$conn->getUnassigned_numberOf_ads("Supervisor",$_SESSION['admin_id']);
+                                        }
+                                        echo $unass;
+                                      ?>
+                                    </span><span class="font18">&nbsp;Ads</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                         </div>
+                      </div>
+
+                       <!-- Row 1 -->
+                      <div class="row">
+                         <div class="col-md-3 col-lg-3 col-xl-3">
+                            <div class="panel panel-default goal_panel2">
+                               <div class="panel-body" >
+                                 <p class="content_head">TT of Ads 1st May 2016</p>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="col-md-6 col-lg-6 col-xl-6">
+                            <div class="panel panel-default goal_panel2">
+                               <div class="panel-body" >
+                                 <p class="content_head">Weekly total after commission</p>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="col-md-3 col-lg-3 col-xl-3">
+                            <div class="panel panel-default goal_panel2">
+                               <div class="panel-body" >
+                                 <p class="content_head">Work log</p>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+
+                      <!-- Row 2 -->
+                      <div class="row">
+                         <div class="col-md-5 col-lg-5 col-xl-5">
+                            <div class="panel panel-default goal_panel2">
+                               <div class="panel-body" >
+                                 <p class="content_head">Monthly total after commission May 2016</p>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="col-md-5 col-lg-5 col-xl-5">
+                            <div class="panel panel-default goal_panel2">
+                               <div class="panel-body" >
+                                 <p class="content_head">Yearly total after commission 2016</p>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="col-md-2 col-lg-2 col-xl-2">
+                            <div class="panel panel-default goal_panel2">
+                               <div class="panel-body" >
+                                 <p class="content_head">This Monthly profits</p>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                        
+                  </div>
+                </div>
+              </div>
+            </div>
+ 
+          </div>
+
+        <br/><br/><br/><br/><br/>
+     </section>
+
+    </section>
+    <!--***************end content**************-->
+      
+  <?php
+      include("footing.php");
+    ?>
+
+</section>
+
+<?php 
+  include("footer.php");
+?>
+
